@@ -472,7 +472,9 @@ a{ color: #ffcc33}
 
 </div>
 
+
 <script>
+/*How the maroon boxes will show all names*/
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
@@ -483,7 +485,7 @@ function filterSelection(c) {
     if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
   }
 }
-
+/*How the maroon boxes will show specific names for specific locations*/
 function w3AddClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -492,7 +494,7 @@ function w3AddClass(element, name) {
     if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
   }
 }
-
+/*How the maroon boxes will remove specific names for specific locations*/
 function w3RemoveClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -504,7 +506,7 @@ function w3RemoveClass(element, name) {
   }
   element.className = arr1.join(" ");
 }
-
+/*How the buttons work and sort content*/
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
